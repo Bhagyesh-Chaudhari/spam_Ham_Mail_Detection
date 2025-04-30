@@ -6,8 +6,8 @@ import re
 from nltk.corpus import stopwords
 
 # Load model and vectorizer
-model = joblib.load(r'D:\WORKSPACE\spam_Ham_Mail_Detection\spam_ham_mail_detection\spam_classifier_model.joblib')
-vectorizer = joblib.load(r'D:\WORKSPACE\spam_Ham_Mail_Detection\spam_ham_mail_detection\spam_vectorizer.joblib')
+model = joblib.load(r'<filePath>\spam_ham_mail_detection\spam_classifier_model.joblib')
+vectorizer = joblib.load(r'<filePath>\spam_ham_mail_detection\spam_vectorizer.joblib')
 
 # Preprocessing function (same as during training)
 def preprocess_text(text):
@@ -47,8 +47,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Replace with your email and app password
-    EMAIL = 'bhagyeshchaudhari71@gmail.com'
-    PASSWORD = 'kzpt iyye gwue muzx'
+    EMAIL = 'Enter your email here'
+    PASSWORD = 'Enter your app password here'
     try:
         emails = fetch_emails(EMAIL, PASSWORD, n=10)
     except Exception as e:
